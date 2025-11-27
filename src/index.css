@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+
+
+@import 'tailwindcss';
+@plugin 'daisyui';
+
+
+.wrapper {
+  @apply w-full mx-auto py-10 px-4 md:py-5 md:px-14 overflow-x-hidden;
+}

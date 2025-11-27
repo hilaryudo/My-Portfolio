@@ -1,0 +1,32 @@
+export const projects = [
+    {
+        title: "Rest Countries Site",
+        description: "A responsive web app that displays country data. Users are able to browse, search and view details for each country.",
+        year: "2025",
+        role: "front-end Developer",
+        image: "/src/assets/restcountriesImg.png",
+        badge: "Challange",
+        live: "https://rest-countries-three-alpha.vercel.app/",
+        github: "https://github.com/hilaryudo/Rest-Countries",
+    },
+    {
+        title: "Task Duty App",
+        description: "An API that allows users to create task, edit task, perform CRUD operations and submit task.",
+        year: "2025",
+        role: "front-end Developer",
+        image: "/src/assets/taskduty.png",
+        badge: "Project",
+        live: "https://task-duty-app-phi.vercel.app/",
+        github: "https://github.com/hilaryudo/Task-Duty-App",
+    },
+    {
+        title: "BetaHouse Site",
+        description: "A responsive website that allows users to view different properties, find property by sorting and filtering, register and log in to the site.",
+        year: "2025",
+        role: "full-stack Developer",
+        image: "/src/assets/betahouse.png",
+        badge: "Challange",
+        live: "https://beta-house-lake.vercel.app/",
+        github: "https://github.com/hilaryudo/BetaHouse",
+    },
+];
