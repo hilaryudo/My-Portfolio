@@ -9,7 +9,7 @@ const About = () => {
     <div>
       <main className='bg-black '>
         <section className='wrapper md:flex justify-between items-center gap-20'>
-          <h1 className='font-[BebasNeue] font-normal text-[60px] md:text-[100px] lg:text-[72px] lg:pb-60 text-[#FFFFFF] mb-3'>ABOUT ME</h1>
+          <h1 className='font-[BebasNeue] font-normal text-[60px] md:text-[100px] lg:text-[68px] lg:pb-60 text-[#FFFFFF] mb-3'>ABOUT ME</h1>
           <div className='md:w-[704px] font-[Manrope]'>
             <h2 className='font-medium text-[#FFFFFF] text-[24px] md:text-[28px]'>I am a front-end Developer based in Nigeria, Has Applied Microbiology and Brewing background.</h2>
             <p className='font-normal text-[#C7C7C7] text-[16px] md:text-[18px] my-5'>I am a front-end developer based in Nigeria looking for exciting opportunities. Has Applied Microbiology and Brewing background. Likes to focus on accessibility when developing. Passionate and curious about solving problems. Currently, I'm exploring Reactjs, Webflow and a bit of Designing. While I am not programming, I enjoy reading fictions and sourcing for good music. Learning more to improve skill.</p>
@@ -30,7 +30,7 @@ const About = () => {
         </section>
 
         <section className=' wrapper md:flex justify-between items-center gap-20 border-b border-[#484848] mt-10 md:mt-0'>
-          <h1 className='font-[BebasNeue] font-normal text-[40px] md:text-[76px] lg:text-[55px] lg:mb-40 text-[#FFFFFF]'>MY CAPABILITIES</h1>
+          <h1 className='font-[BebasNeue] font-normal text-[40px] md:text-[76px] lg:text-[50px] lg:mb-40 text-[#FFFFFF]'>MY CAPABILITIES</h1>
           <div className='w-[350px] md:w-[600px] md:mt-15 mt-4 font-[Manrope] '>
             <p className='font-normal text-[18px] text-[#C7C7C7]'>I develop full-stack web solutions with clean design and solid backend logic. I pay attention to user experience and i'm constantly learning and adding new technologies to my toolbox.</p>
             <div className='flex flex-wrap gap-3 my-8'>
@@ -45,8 +45,8 @@ const About = () => {
           </div>
         </section>
 
-        <section className=' wrapper md:flex justify-between  gap-20 border-b border-[#484848] mt-10'>
-          <h1 className='font-[BebasNeue] font-normal text-[40px] md:text-[76px] lg:text-[55px] text-[#FFFFFF]'>MY EXPERIENCE</h1>
+        <section className=' wrapper md:flex justify-between  gap-20 border-b border-[#484848] mt-5'>
+          <h1 className='font-[BebasNeue] font-normal text-[40px] md:text-[76px] lg:text-[55px] text-[#FFFFFF] mb-10 md:mb-0'>MY EXPERIENCE</h1>
           <div>
             <div className='w-[350px] md:w-[600px]'>
               <div className='flex justify-between items-center mb-5'>

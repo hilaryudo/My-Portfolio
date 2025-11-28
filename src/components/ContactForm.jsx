@@ -6,15 +6,18 @@ import twitterIcon from "../assets/twitterIcon.png";
 import insta from "../assets/insta.png"
 
 const ContactForm = () => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
+    const [form, setForm] = useState({name: "", email: "", subject: "", message: ""});
     const [loading, setLoading] = useState(false);
-    const [success, setSuccess] = useState(null)
+    const [success, setSuccess] = useState(null);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm((prev) => ({ ...prev, [name]: value }));
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
         setLoading(true);
         setSuccess(null);
 
@@ -23,29 +26,24 @@ const ContactForm = () => {
         const publicKey = 'F6UEjgkvOqtOiBHKE';
 
         const templateParams = {
-            from_name: name,
-            from_email: email,
+            from_name: form.name,
+            from_email: form.email,
             to_name: 'Hilary',
-            subject: subject,
-            message: message,
+            subject: form.subject,
+            message: form.message,
         };
 
         emailjs.send(serviceId, templateId, templateParams, publicKey)
-        .then((response) => {
+        .then(() => {
             setLoading(false);
             setSuccess('Message sent successfully!')
-            console.log('Email sent successfully', response);
-            setName('');
-            setEmail('');
-            setSubject('');
-            setMessage('');
+            setForm({name: "", email: "", subject: "", message: ""});
         })
-        .catch((error) => {
+        .catch(() => {
             setLoading(false);
-            setSuccess('failed to send message. Try again.')
-            console.error('Error sending email', error)
+            setSuccess('failed to send message. Try again.');
         });
-    }
+    };
 
 
   return (
@@ -65,23 +63,23 @@ const ContactForm = () => {
         <div className='w-[343px] md:w-[600px] mt-10'>
             <form onSubmit={handleSubmit} >
                 <label className='h-[85px]'> <span className='block text-[16px] text-[#C7C7C7] font-medium font-[Manrope] mb-3'>Name</span>
-                    <input name="name" value={name} onChange={(e) => setName(e.target.value)} required
-                    className='w-[350px] md:w-[600px] h-[51px] bg-[#1A1A1A] rounded-sm px-4 py-3 text-[18px] text-[#FFFFFF] font-normal font-[Manrope] mb-5'/>
+                    <input name="name" value={form.name} onChange={handleChange} required
+                    className='w-[350px] md:w-[600px] h-[51px] bg-[#1A1A1A] rounded-sm px-4 py-3 text-[18px] text-[#FFFFFF] font-normal font-[Manrope] mb-5 focus:border focus:border-[#D3E97A] focus:ring-1 focus:ring-[#D3E97A] outline-none'/>
                 </label>
 
                 <label> <span className='block text-[16px] text-[#C7C7C7] font-medium font-[Manrope] mb-3'>Email</span>
-                    <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required
-                    className='w-[350px] md:w-[600px] h-[51px] bg-[#1A1A1A] rounded-sm px-4 py-3 text-[18px] text-[#FFFFFF] font-normal font-[Manrope] mb-5'/>
+                    <input type="email" name="email" value={form.email} onChange={handleChange} required
+                    className='w-[350px] md:w-[600px] h-[51px] bg-[#1A1A1A] rounded-sm px-4 py-3 text-[18px] text-[#FFFFFF] font-normal font-[Manrope] mb-5 focus:border focus:border-[#D3E97A] focus:ring-1 focus:ring-[#D3E97A] outline-none'/>
                 </label>
 
                 <label> <span className='block text-[16px] text-[#C7C7C7] font-medium font-[Manrope] mb-3'>Subject</span>
-                    <input name="subject" value={subject} onChange={(e) => setSubject(e.target.value)}
-                    className='w-[350px] md:w-[600px] h-[51px] bg-[#1A1A1A] rounded-sm px-4 py-3 text-[18px] text-[#FFFFFF] font-normal font-[Manrope] mb-5'/>
+                    <input name="subject" value={form.subject} onChange={handleChange}
+                    className='w-[350px] md:w-[600px] h-[51px] bg-[#1A1A1A] rounded-sm px-4 py-3 text-[18px] text-[#FFFFFF] font-normal font-[Manrope] mb-5 focus:border focus:border-[#D3E97A] focus:ring-1 focus:ring-[#D3E97A] outline-none'/>
                 </label>
 
                 <label> <span className='block text-[16px] text-[#C7C7C7] font-medium font-[Manrope] mb-3'>Message</span>
-                    <textarea name="message" value={message} rows="6" onChange={(e) => setMessage(e.target.value)} required
-                        className='w-[350px] md:w-[600px] h-[190px] bg-[#1A1A1A] rounded-sm px-4 py-3 text-[18px] text-[#FFFFFF] font-normal font-[Manrope] mb-5'></textarea>
+                    <textarea name="message" value={form.message} rows="6" onChange={handleChange} required
+                        className='w-[350px] md:w-[600px] h-[190px] bg-[#1A1A1A] rounded-sm px-4 py-3 text-[18px] text-[#FFFFFF] font-normal font-[Manrope] mb-5 focus:border focus:border-[#D3E97A] focus:ring-1 focus:ring-[#D3E97A] outline-none'></textarea>
                 </label>
 
                 <button type='submit' disabled={loading} 

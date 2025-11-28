@@ -29,11 +29,11 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <div className='mt-8 flex items-center gap-4'>
-          <a href={project.live} target='_blank' className='flex items-center gap-1 border-b border-[#D3E97A] text-[#D3E97A] font-[Manrope] font-bold text-[16px]'>
+          <a href={project.live} target='_blank' className='flex items-center gap-1 border-b border-[#D3E97A] text-[#D3E97A] font-[Manrope] font-bold text-[16px] hover:text-[20px]'>
             LIVE DEMO
             <img src={arrowIcon} alt="arrowicon" className='w-6 h-6' />
           </a>
-          <a href={project.github} target='_blank' className='flex items-center gap-1 border-b border-[#D3E97A] text-[#D3E97A] font-[Manrope] font-bold text-[16px]'>
+          <a href={project.github} target='_blank' className='flex items-center gap-1 border-b border-[#D3E97A] text-[#D3E97A] font-[Manrope] font-bold text-[16px] hover:text-[20px]'>
             SEE ON GITHUB
             <img src={github} alt="github" className='w-6 h-6' />
           </a>
