@@ -1,7 +1,6 @@
 import React from 'react';
-import linkedin from '../assets/linkin.png';
 import github from '../assets/github.png';
-import hills from '../assets/Hilaree.jpg';
+import udohilaryimage from '../assets/udohilaryimage.jpeg'
 import ContactForm from '../components/ContactForm';
 
 const About = () => {
@@ -15,9 +14,7 @@ const About = () => {
             <p className='font-normal text-[#C7C7C7] text-[16px] md:text-[18px] my-5'>I am a front-end developer based in Nigeria looking for exciting opportunities. Has Applied Microbiology and Brewing background. Likes to focus on accessibility when developing. Passionate and curious about solving problems. Currently, I'm exploring Reactjs, Webflow and a bit of Designing. While I am not programming, I enjoy reading fictions and sourcing for good music. Learning more to improve skill.</p>
             <div className='flex items-center gap-4 mb-12 mt-9'>
               <p className='bg-[#D3E97A] px-6 py-5 rounded-[100px] text-[16px] text-[#0A0A0A] font-[Manrope] font-bold'>DOWNLOAD RESUME .</p>
-              <div className='w-[54px] h-[54px] bg-[#222222] rounded-[100px]'>
-                <img src={linkedin} alt="linkedin" className='p-3' />
-              </div>
+            
               <div className='w-[54px] h-[54px] bg-[#222222] rounded-[100px]'>
                 <img src={github} alt="github" className='p-3' />
               </div>
@@ -26,7 +23,7 @@ const About = () => {
         </section>
 
         <section className=' md:w-[1440px] lg:w-[1180px] mx-auto bg-[#C7C7C7] md:rounded-2xl rounded-lg'>
-          <img src={hills} alt="hills image" className='md:w-[550px] md:h-[650px] mx-auto w-[330px] h-[330px]' />
+          <img src={udohilaryimage} alt="hills image" className='md:w-[550px] md:h-[650px] mx-auto w-[330px] h-[330px]' />
         </section>
 
         <section className=' wrapper md:flex justify-between items-center gap-20 border-b border-[#484848] mt-10 md:mt-0'>

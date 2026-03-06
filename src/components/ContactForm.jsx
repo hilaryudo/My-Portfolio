@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Linkedin from "../assets/linkin.png";
 import github from "../assets/github.png";
 import twitterIcon from "../assets/twitterIcon.png";
 import insta from "../assets/insta.png"
@@ -53,10 +52,15 @@ const ContactForm = () => {
             <p className='font-[Manrope] font-normal text-[#C7C7C7] text-[14px] md:text-[18px]'>Say Hello at <a href="mailto:hilaryudo9@gmail.com" className='border-b border-[#D3E97A]'> hilaryudo9@gmail.com</a></p>
             <p className='font-[Manrope] font-normal text-[#C7C7C7] text-[14px] md:text-[18px] mt-2'>For more info, here's my <a href="/" className='border-b border-[#D3E97A]'>resume</a></p>
             <div className='flex items-center gap-8 md:gap-6 md:mb-[370px] mb-4 mt-8'>
-                <img src={Linkedin} alt="linkin icon" />
-                <img src={github} alt="github icon" />
-                <img src={twitterIcon} alt="twitter icon" />
-                <img src={insta} alt="instagram icon" />
+                <a href="https://github.com/hilaryudo" >
+                    <img src={github} alt="github icon" />
+                </a>
+                <a href="https://twitter.com/hilaree90">
+                    <img src={twitterIcon} alt="twitter icon" />
+                </a>
+                <a href="https://instagram.com/i_hilaree">
+                    <img src={insta} alt="instagram icon" />
+                </a>
             </div>
             <p className='hidden md:block font-[Manrope] font-medium text-[#C7C7C7] text-[16px]'>@ 2025 Hilary Udo</p>
         </div>
